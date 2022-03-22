@@ -24,8 +24,9 @@ spec:
       - path: /
       {{- end }}
         backend:
-          serviceName: spin-deck
-          servicePort: 9000
+          name: spin-deck
+          port: 
+            number: 9000
         pathType: ImplementationSpecific
 {{- if .Values.ingress.tls }}
   tls:

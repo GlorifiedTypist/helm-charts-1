@@ -24,8 +24,9 @@ spec:
       - path: /
       {{- end }}
         backend:
-          serviceName: spin-gate
-          servicePort: 8084
+          name: spin-gate
+          port:
+            number: 8084
         pathType: ImplementationSpecific
 {{- if .Values.ingressGate.tls }}
   tls:
