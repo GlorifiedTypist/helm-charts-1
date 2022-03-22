@@ -26,6 +26,7 @@ spec:
         backend:
           serviceName: spin-deck
           servicePort: 9000
+        pathType: ImplementationSpecific
 {{- if .Values.ingress.tls }}
   tls:
 {{ toYaml .Values.ingress.tls | indent 4 }}
