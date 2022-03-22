@@ -26,6 +26,7 @@ spec:
         backend:
           serviceName: spin-gate
           servicePort: 8084
+        pathType: ImplementationSpecific
 {{- if .Values.ingressGate.tls }}
   tls:
 {{ toYaml .Values.ingressGate.tls | indent 4 }}
